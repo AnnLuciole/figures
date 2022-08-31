@@ -1,6 +1,6 @@
 package Figures;
 
-public class Figures {
+public abstract class Figures implements Calculatable {
     private int numOfAngle;
 
     public int getNumOfAngle() {
