@@ -1,20 +1,24 @@
 package Figures.Quadrangles;
 
-public class Parallelogram extends Quadrangles {
-
+public class Trapezoid extends Quadrangles {
     private int lengthOfSideA;
     private int lengthOfSideB;
-    private int lengthOfHighA;
+    private int lengthOfHigh;
 
-    Parallelogram (int lengthOfSideA, int lengthOfSideB, int lengthOfHighA) {
+    Trapezoid (int lengthOfSideA, int lengthOfSideB, int lengthOfHigh) {
         this.lengthOfSideA = lengthOfSideA;
         this.lengthOfSideB = lengthOfSideB;
-        this.lengthOfHighA = lengthOfHighA;
+        this.lengthOfHigh = lengthOfHigh;
         setNumOfAngle(4);
     }
 
-    public int getLengthOfHighA() {
-        return lengthOfHighA;
+    @Override
+    public double getArea() {
+        return (lengthOfSideA + lengthOfSideB) * lengthOfHigh / 2;
+    }
+
+    public int getLengthOfHigh() {
+        return lengthOfHigh;
     }
 
     public int getLengthOfSideA() {
@@ -25,8 +29,8 @@ public class Parallelogram extends Quadrangles {
         return lengthOfSideB;
     }
 
-    public void setLengthOfHighA(int lengthOfHighA) {
-        this.lengthOfHighA = lengthOfHighA;
+    public void setLengthOfHigh(int lengthOfHigh) {
+        this.lengthOfHigh = lengthOfHigh;
     }
 
     public void setLengthOfSideA(int lengthOfSideA) {
@@ -35,10 +39,5 @@ public class Parallelogram extends Quadrangles {
 
     public void setLengthOfSideB(int lengthOfSideB) {
         this.lengthOfSideB = lengthOfSideB;
-    }
-
-    @Override
-    public double getArea() {
-        return lengthOfSideA * lengthOfHighA;
     }
 }

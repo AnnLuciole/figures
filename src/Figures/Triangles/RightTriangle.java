@@ -3,23 +3,23 @@ package Figures.Triangles;
 public class RightTriangle extends Triangles{
 
 
-    private int cathetA;
-    private int cathetB;
+    private int lengthOfCathetA;
+    private int lengthOfCathetB;
 
 
-    RightTriangle(int cathetA, int cathetB) {
-        this.cathetA = cathetA;
-        this.cathetB = cathetB;
+    RightTriangle(int lengthOfCathetA, int lengthOfCathetB) {
+        this.lengthOfCathetA = lengthOfCathetA;
+        this.lengthOfCathetB = lengthOfCathetB;
         setNumOfAngle(3);
     }
 
     @Override
     public double getArea() {
-        return cathetA * cathetB / 2.0;
+        return lengthOfCathetA * lengthOfCathetB / 2.0;
     }
 
     @Override
     protected double getHigh() {
-        return cathetA;
+        return lengthOfCathetA;
     }
 }
